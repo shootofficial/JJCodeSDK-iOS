@@ -38,7 +38,7 @@ typedef void (^JJCodeFailBlock)(NSInteger, NSString * _Nonnull);
 
 /**
 * 获取当前SDK的版本号
-* @return NSString SDK版本号(1.1.0)
+* @return NSString SDK版本号(1.2.0)
 */
 + (NSString * _Nonnull)sdkVersion;
 
@@ -70,6 +70,17 @@ typedef void (^JJCodeFailBlock)(NSInteger, NSString * _Nonnull);
                success:(JJCodeSuccessBlock _Nullable)success
                fail:(JJCodeFailBlock _Nullable)fail;
 
+/**
+* 验证手机号码
+* @param mobile 需要验证的手机号码
+* @param success 成功回调block，在主线程（UI线程）回调
+* @param fail 失败回调block，在主线程（UI线程）回调
+@ @param showLoading 是否展示默认Loading
+*/
++ (void)verify:(NSString * _Nonnull)mobile
+               success:(JJCodeSuccessBlock _Nullable)success
+               fail:(JJCodeFailBlock _Nullable)fail
+               showLoading:(BOOL)showLoading;
 /**
  * 处理微信小程序结果回调
  * @param extMsg WXApiObject.h中WXLaunchMiniProgramResp中的extMsg
