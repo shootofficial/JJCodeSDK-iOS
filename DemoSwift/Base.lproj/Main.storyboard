@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LuA-w5-7BO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Vtc-Et-Vay">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LuA-w5-7BO" customClass="HomeViewController" customModule="DemoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qyE-y2-LN2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入需要验证的手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aru-V3-LxR">
+                                <rect key="frame" x="106" y="224" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="需要验证的手机号码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9y2-D7-P1n">
+                                <rect key="frame" x="80" y="287" width="254" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Iv8-Ag-jnD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GY-S9-egB">
+                                <rect key="frame" x="107" y="367" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2zk-Bm-6Ne"/>
+                                    <constraint firstAttribute="width" constant="200" id="5Xc-1I-V9h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="开始验证">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="verifyPhoneNumAction:" destination="LuA-w5-7BO" eventType="touchUpInside" id="tEr-au-Whs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-hJ-eHD">
+                                <rect key="frame" x="107" y="447" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eTE-2Y-BBM"/>
+                                    <constraint firstAttribute="width" constant="200" id="ntL-i6-rX6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="检测微信接入情况">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkWxAction:" destination="LuA-w5-7BO" eventType="touchUpInside" id="bQC-0b-S29"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mw6-7f-H27">
+                                <rect key="frame" x="147" y="68" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="GuO-hz-kJY"/>
+                                    <constraint firstAttribute="width" constant="120" id="fAQ-4E-Cxd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yes-AV-5mN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WJN-hJ-eHD" firstAttribute="centerX" secondItem="qyE-y2-LN2" secondAttribute="centerX" id="2Xr-ta-cze"/>
+                            <constraint firstItem="9y2-D7-P1n" firstAttribute="leading" secondItem="yes-AV-5mN" secondAttribute="leading" constant="80" id="GO5-UQ-AjT"/>
+                            <constraint firstItem="mw6-7f-H27" firstAttribute="top" secondItem="yes-AV-5mN" secondAttribute="top" constant="24" id="P8h-Fe-jum"/>
+                            <constraint firstItem="WJN-hJ-eHD" firstAttribute="top" secondItem="6GY-S9-egB" secondAttribute="bottom" constant="30" id="ZKW-Yt-GfQ"/>
+                            <constraint firstItem="9y2-D7-P1n" firstAttribute="top" secondItem="Aru-V3-LxR" secondAttribute="bottom" constant="42" id="a4b-5m-dhe"/>
+                            <constraint firstItem="yes-AV-5mN" firstAttribute="trailing" secondItem="9y2-D7-P1n" secondAttribute="trailing" constant="80" id="ard-BE-deX"/>
+                            <constraint firstItem="6GY-S9-egB" firstAttribute="centerX" secondItem="qyE-y2-LN2" secondAttribute="centerX" id="baC-0R-k7e"/>
+                            <constraint firstItem="Aru-V3-LxR" firstAttribute="centerX" secondItem="qyE-y2-LN2" secondAttribute="centerX" id="i93-m1-6WK"/>
+                            <constraint firstItem="Aru-V3-LxR" firstAttribute="top" secondItem="yes-AV-5mN" secondAttribute="top" constant="180" id="ngV-sj-XGA"/>
+                            <constraint firstItem="mw6-7f-H27" firstAttribute="centerX" secondItem="qyE-y2-LN2" secondAttribute="centerX" id="pni-OP-n49"/>
+                            <constraint firstItem="6GY-S9-egB" firstAttribute="top" secondItem="9y2-D7-P1n" secondAttribute="bottom" constant="30" id="zna-1X-GiR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="phoneTextField" destination="9y2-D7-P1n" id="q5n-eY-4A1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bM-zo-S6j" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="665"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
