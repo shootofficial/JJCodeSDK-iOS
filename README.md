@@ -18,11 +18,20 @@
 pod 'JijiancodeSDK', '~> 1.1.0'
 ```
 
+如果项目主要开发语言为Swift，参考[Apple官方文档](https://developer.apple.com/documentation/swift/imported_c_and_objective-c_apis/importing_objective-c_into_swift)，创建Objective-C bridging header，并在header中增加以下代码：
+``` objc
+#import <JijiancodeSDK/JJCode.h>
+```
+
 #### 方式二：手动集成
 
 1. 前往 [JijiancodeSDK](https://github.com/shootofficial/JJCodeSDK-iOS)下载
 2. 找到项目中的 `JijiancodeSDK` 目录，将其复制到项目的根目录下
 
+如果项目主要开发语言为Swift，参考[Apple官方文档](https://developer.apple.com/documentation/swift/imported_c_and_objective-c_apis/importing_objective-c_into_swift)，创建Objective-C bridging header，并在header中增加以下代码：
+``` objc
+#import "JJCode.h"
+```
 
 ### 二、配置 `APP_ID` 和 微信 `APP_ID`
 
@@ -102,6 +111,10 @@ pod 'JijiancodeSDK', '~> 1.1.0'
     }
 }
 ```
+
+#### Swift
+
+请直接参考[DemoSwift](https://github.com/shootofficial/JJCodeSDK-iOS)完成配置JJCodeSDK
 
 ### 四、启动验证流程
 
